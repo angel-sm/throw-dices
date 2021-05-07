@@ -9,6 +9,7 @@ export const Scene = styled.div`
     width: 100px;
     height: 100px;
     perspective: 1000px;
+    position: relative;
 `;
 
 export const Cube = styled.div`
@@ -26,40 +27,36 @@ const Face = styled.div`
     position: absolute;
     width: 100px;
     height: 100px;
-    border-radius: .2em;
+    border-radius: .1em;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 4em;
-    color: #fff;
+    color: #2c3e50;
+    background-color:#bdc3c7;
+    border: 1px solid rgba(0,0,0,.2);
 `;
 
 export const FrontFace = styled(Face)`
     transform: rotateY(  0deg) translateZ(50px); 
-    background-color: red;
 `;
 
 export const RightFace = styled(Face)`
     transform: rotateY( 90deg) translateZ(50px);;
-    background-color: aliceblue;
 `;
 
 export const BackFace = styled(Face)`
     transform: rotateY(180deg) translateZ(50px);;
-    background-color: aqua;
 `;
 
 export const LeftFace = styled(Face)`
     transform: rotateY(-90deg) translateZ(50px);;
-    background-color: burlywood;
 `;
 
 export const TopFace = styled(Face)`
     transform: rotateX( 90deg) translateZ(50px);; 
-    background-color: cornsilk;
 `;
 
 export const BottomFace = styled(Face)`
     transform: rotateX(-90deg) translateZ(50px);;
-    background-color: crimson;
 `;

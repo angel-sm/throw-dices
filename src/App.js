@@ -5,9 +5,9 @@ export const App = () => {
   const [turnAll, setTurnAll] = useState();
   return (
     <>
-      <Dice turnAll={turnAll} faces={6} />
-      <Dice turnAll={turnAll} faces={6} />
-      <Dice turnAll={turnAll} faces={10} />
+      <Dice turnAll={turnAll} />
+      <Dice turnAll={turnAll} />
+      <Dice turnAll={turnAll} />
       <button onClick={() => setTurnAll((turnAll) => !turnAll)}>Turn</button>
     </>
   );
