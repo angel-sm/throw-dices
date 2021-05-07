@@ -1,7 +1,8 @@
 import React from 'react';
+import { Dice } from './components/Dice';
 
 export const App = () => {
   return (
-    <h1>Hello</h1>
+    <Dice />
   );
 };
