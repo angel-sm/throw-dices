@@ -29,7 +29,6 @@ export const DiceOptions = ({ getFaces }) => {
     const number = prompt('Numero de caras');
     getFaces(number);
     setFaces(number);
-    
   };
 
   useEffect(() => {
