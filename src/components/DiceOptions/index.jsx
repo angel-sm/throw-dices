@@ -14,11 +14,13 @@ const OptionContainer = styled.div`
 const Faces = styled.img`
     max-width:25px;
     cursor: pointer;
-    transform: rotateX(360deg);
-`;
+    transition: all ease 1s;
+    
+    &:hover{
+      transform: rotateY(180deg);
 
-const Tag = styled.span`
-
+    }
+    
 `;
 
 export const DiceOptions = ({ getFaces }) => {
@@ -26,7 +28,12 @@ export const DiceOptions = ({ getFaces }) => {
   const [faces, setFaces] = useState(6);
 
   const setFacesNumber = () => {
-    const number = prompt('Numero de caras');
+    let number = prompt('Numero de caras');
+
+    if(number < 2){
+      number = 2;
+    }
+
     getFaces(number);
     setFaces(number);
   };
@@ -39,7 +46,7 @@ export const DiceOptions = ({ getFaces }) => {
   return (
     <OptionContainer>
         <Faces src="https://img.icons8.com/fluent-systems-regular/48/000000/dice.png" onClick={setFacesNumber}/>
-        <Tag>{faces}</Tag>
+        <span>{faces}</span>
     </OptionContainer>
   )
 };

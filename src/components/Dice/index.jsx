@@ -13,10 +13,11 @@ import {
   BottomFace,
 } from "./styles";
 
-export const Dice = ({ turnAll }) => {
+export const Dice = ({ turnFlag }) => {
+
   const [turn, setTurn] = useState(false);
   const [num, setNum] = useState(0);
-  const [faces, setFaces] = useState(0);
+  const [faces, setFaces] = useState(6);
 
   const generateNumber = () => {
     const randomNum = Math.floor(Math.random() * faces) + 1;
@@ -44,7 +45,7 @@ export const Dice = ({ turnAll }) => {
 
   useEffect(() => {
     turnDice();
-  }, [turnAll]);
+  }, [turnFlag]);
 
   return (
     <>
