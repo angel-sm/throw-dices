@@ -2,8 +2,18 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Dice } from "./components/Dice";
-import { DicesGrid, MainContent, BoardContent, DiceSpace, ButtonsGrid, Instructions, RollButton, NewDiceButton, DeleteDiceButton } from "./assets/styles";
-import { Header } from "./components/Header";
+import { Navbar } from "./components/Navbar";
+import { 
+  DicesGrid,
+  MainContent,
+  BoardContent,
+  DiceSpace,
+  ButtonsGrid,
+  Instructions,
+  RollButton,
+  NewDiceButton,
+  DeleteDiceButton 
+} from "./assets/styles";
 
 export const App = () => {
   const [turnFlag, setTurnFlag] = useState(false);
@@ -15,8 +25,8 @@ export const App = () => {
   };
 
   return (
-    <MainContent>
-      <Header />
+    <MainContent id='main-content'>
+      <Navbar />
       <BoardContent>
         <ButtonsGrid>
           <RollButton onClick={() => setTurnFlag((turnFlag) => !turnFlag)}>

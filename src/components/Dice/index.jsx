@@ -14,7 +14,7 @@ import {
 } from "./styles";
 
 export const Dice = ({ turnFlag }) => {
-
+  
   const [turn, setTurn] = useState(false);
   const [num, setNum] = useState(0);
   const [faces, setFaces] = useState(6);
@@ -25,8 +25,7 @@ export const Dice = ({ turnFlag }) => {
   };
 
   const getFaces = (number) => {
-	console.log(number);
-	setFaces(faces => number);
+    setFaces((faces) => number);
   };
 
   const turnDice = () => {
